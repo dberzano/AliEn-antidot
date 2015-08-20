@@ -21,9 +21,6 @@ CONFIGURE_SCRIPTS = $(WORKSRC)/cmake.ng
 BUILD_SCRIPTS = $(WORKSRC)/cmake.ng
 INSTALL_SCRIPTS = $(WORKSRC)/cmake.ng
 
-ifneq ($(shell uname),Darwin)
-	BUILD_ARGS += -j$(shell grep -c bogomips /proc/cpuinfo)
-endif
 
 CONFIGURE_ARGS = -DCMAKE_INSTALL_PREFIX=$(PREFIX)/api \
                  -DCMAKE_INSTALL_LIBDIR=$(PREFIX)/api/lib \
@@ -40,6 +37,11 @@ CONFIGURE_ARGS = -DCMAKE_INSTALL_PREFIX=$(PREFIX)/api \
 CONFIGURE_ENV = CFLAGS="-I$(PREFIX)/include" CPPFLAGS="-I$(PREFIX)/include" CXXFLAGS="-I$(PREFIX)/include" LDFLAGS="-L$(PREFIX)/lib"
 BUILD_ENV = CFLAGS="-I$(PREFIX)/include" CPPFLAGS="-I$(PREFIX)/include" CXXFLAGS="-I$(PREFIX)/include" LDFLAGS="-L$(PREFIX)/lib"
 INSTALL_ENV = CFLAGS="-I$(PREFIX)/include" CPPFLAGS="-I$(PREFIX)/include" CXXFLAGS="-I$(PREFIX)/include" LDFLAGS="-L$(PREFIX)/lib"
+
+ifneq ($(shell uname),Darwin)
+  BUILD_ENV += MAKEFLAGS=-j$(shell grep -c bogomips /proc/cpuinfo)
+endif
+
 
 include ../category.mk
 

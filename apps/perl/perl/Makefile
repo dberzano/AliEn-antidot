@@ -22,6 +22,10 @@ TEST_SCRIPTS = $(WORKSRC)/Makefile
 
 CONFIGURE_ARGS = -des -Dprefix=$(PREFIX) -Dinstallprefix=$(PREFIX) -Dusethreads -Duselargefiles -Uafs -Ud_csh -Ud_ualarm -Uusesfio -Uusenm -DDEBUGGING=-g -Doptimize=-O2 -Dinstalldirs=perl -Dccflags="-fPIC" -Dplibpth="$(PREFIX)/lib" -Dldflags="-L$(PREFIX)/lib"
 
+ifneq ($(shell uname),Darwin)
+  BUILD_ENV += MAKEFLAGS=-j$(shell grep -c bogomips /proc/cpuinfo)
+endif
+
 #$(PERL_DIRPATHS) -d -des -Dinstalldirs=perl  -Doptimize="-O" -Dccflags="-fPIC" -Dinstallprefix=$(PREFIX) -Dprefix=$(PREFIX) -Dd_semctl_semun -Di_db -Di_syslog -Dudsedl=yes -Dman3ext=3 -Dusemymalloc=no -DDEBUGGING -Dplibpth="$(PREFIX)/lib" -Dldflags="-L$(PREFIX)/lib" -A append:libswanted=" pthread"
 
 include ../category.mk
