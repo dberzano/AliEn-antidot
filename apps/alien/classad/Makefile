@@ -22,7 +22,7 @@ ifneq ($(DARWIN),Darwin)
     TEST_SCRIPTS = $(WORKSRC)/Makefile
 endif
 
-CONFIGURE_ARGS = --prefix=$(PREFIX) --with-classads-dir=$(PREFIX) --with-classad-lib=classad --with-swig-dir=$(PREFIX) --with-perl5=$(PREFIX)/bin/perl
+CONFIGURE_ARGS = --prefix=$(PREFIX) --with-classads-dir=$(PREFIX) --with-classad-lib=classad --with-swig-dir=/usr --with-perl5=$(PREFIX)/bin/perl
 
 include ../category.mk
 
