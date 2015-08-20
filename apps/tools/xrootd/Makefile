@@ -1,5 +1,5 @@
 GARNAME = xrootd
-GARVERSION = 3.3.6
+GARVERSION = 3.2.7
 
 CATEGORIES = apps-libs
 DISTFILES = $(GARNAME)-$(GARVERSION).tar.gz
@@ -7,7 +7,7 @@ DISTFILES = $(GARNAME)-$(GARVERSION).tar.gz
 PATCHFILES =
 NOCHECKSUM = $(DISTFILES) $(PATCHFILES)
 
-MASTER_SITES = http://xrootd.org/download/v3.3.6/
+MASTER_SITES = http://alitorrent.cern.ch/src/xrd3/repository/
 
 LIBDEPS = apps/tools/ApMon-CPP apps/perl/perl apps/system/libxml2 apps/system/openssl apps/tools/ml_gsoapclient apps/devel/pcre
 
@@ -41,7 +41,6 @@ INSTALL_ENV = CFLAGS="-I$(PREFIX)/include" CPPFLAGS="-I$(PREFIX)/include" CXXFLA
 ifneq ($(shell uname),Darwin)
   BUILD_ENV += MAKEFLAGS=-j$(shell grep -c bogomips /proc/cpuinfo)
 endif
-
 
 include ../category.mk
 
