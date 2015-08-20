@@ -7,7 +7,7 @@ PATCHFILES =
 #MASTER_SITES = http://puzzle.dl.sourceforge.net/sourceforge/expat/ 
 MASTER_SITES = http://downloads.sourceforge.net/project/expat/expat/$(GARVERSION)/
 
-LIBDEPS = apps/gcc/gcc apps/devel/libtool apps/devel/automake
+LIBDEPS =   
 
 DESCRIPTION = Expat XML Parser
 URL = http://www.libexpat.org/

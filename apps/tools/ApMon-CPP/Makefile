@@ -6,7 +6,7 @@ PATCHFILES =
 
 MASTER_SITES = http://monalisa.cern.ch/download/apmon/ http://monalisa.cacr.caltech.edu/download/apmon/
 
-LIBDEPS = apps/gcc/gcc
+LIBDEPS = 
 
 AUTHOR  = Catalin Cirstoiu
 LICENSE = 

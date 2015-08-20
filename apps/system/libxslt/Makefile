@@ -5,7 +5,7 @@ DISTFILES = $(GARNAME)-$(GARVERSION).tar.gz
 
 MASTER_SITES = http://ftp.acc.umu.se/pub/gnome/sources/libxslt/1.1/ ftp://xmlsoft.org/libxslt/
 
-LIBDEPS = apps/system/libxml2 apps/system/zlib apps/devel/automake apps/devel/libtool
+LIBDEPS = apps/system/libxml2 apps/system/zlib  
 
 DESCRIPTION = The XSLT C library for Gnome
 URL = http://xmlsoft.org/XSLT/

@@ -5,7 +5,7 @@ DISTFILES = $(GARNAME)-$(GARVERSION).tar.gz
 
 PATCHFILES = locale.t.diff ubuntu.patch
 
-MASTER_SITES = http://ftp.funet.fi/pub/CPAN/src/  http://www.cpan.org/src/
+MASTER_SITES = http://www.cpan.org/src/
 
 LIBDEPS = apps/system/gdbm
 

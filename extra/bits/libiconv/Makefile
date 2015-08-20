@@ -6,7 +6,7 @@ DISTFILES = $(GARNAME)-$(GARVERSION).tar.gz
 #http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
 MASTER_SITES = http://ftp.gnu.org/pub/gnu/libiconv/
 
-LIBDEPS = apps/gcc/gcc 
+LIBDEPS =  
 
 DESCRIPTION = This library provides an iconv() implementation, for use on systems which don't have one
 URL = http://www.gnu.org/software/libiconv/

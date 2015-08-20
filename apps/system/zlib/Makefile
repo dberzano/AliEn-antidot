@@ -5,7 +5,7 @@ DISTFILES = $(GARNAME)-$(GARVERSION).tar.bz2
 
 MASTER_SITES =  http://puzzle.dl.sourceforge.net/sourceforge/libpng/ 
 
-LIBDEPS = apps/gcc/gcc apps/devel/libtool apps/devel/automake
+LIBDEPS =   
 
 DESCRIPTION = Lossless data-compression library 
 URL = http://www.zlib.net/

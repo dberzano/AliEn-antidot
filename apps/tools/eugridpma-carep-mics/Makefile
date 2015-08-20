@@ -1,5 +1,5 @@
 GARNAME = eugridpma-carep-mics
-GARVERSION = 1.64
+GARVERSION = 1.65
 CATEGORIES = apps-tools
 DISTFILES   = igtf-preinstalled-bundle-mics-$(GARVERSION).tar.gz
 DISTNAME = $(GARNAME)
@@ -7,7 +7,7 @@ PATCHFILES = Makefile.patch
 
 MASTER_SITES = http://dist.eugridpma.info/distribution/current/accredited/
 
-LIBDEPS = apps/gcc/gcc
+LIBDEPS = 
 
 DESCRIPTION =  European Policy Management Authority for Grid Authentication in e-Science - acredited CA certificates
 LICENSE =

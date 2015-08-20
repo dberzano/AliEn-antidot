@@ -5,7 +5,7 @@ DISTFILES = $(GARNAME)-$(GARVERSION).tar.gz
 
 MASTER_SITES =  http://cronolog.org/download/
 
-LIBDEPS = apps/gcc/gcc
+LIBDEPS = 
 
 DESCRIPTION = Flexible web log rotation
 URL = http://cronolog.org

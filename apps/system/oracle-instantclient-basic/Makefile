@@ -24,7 +24,7 @@ endif
 
 
 
-LIBDEPS = apps/gcc/gcc
+LIBDEPS = 
 
 DESCRIPTION = Oracle Instant Client
 AUTHOR = Oracle

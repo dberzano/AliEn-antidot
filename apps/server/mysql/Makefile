@@ -7,7 +7,7 @@ PATCHFILES = sslcomp.patch
 
 MASTER_SITES = https://downloads.mariadb.com/archives/mysql-5.5/ http://mirror.switch.ch/ftp/mirror/mysql/Downloads/MySQL-5.5/
 
-LIBDEPS = apps/gcc/gcc apps/system/ncurses
+LIBDEPS =  apps/system/ncurses
 
 DESCRIPTION = MySQL database
 URL = http://dev.mysql.com/

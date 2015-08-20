@@ -5,7 +5,7 @@ DISTFILES = $(GARNAME)-$(GARVERSION).tar.bz2
 
 MASTER_SITES = http://ftp.gnu.org/gnu/gcc/gcc-4.1.2/ ftp://sunsite.cnlab-switch.ch/mirror/gnu/gcc/gcc-4.1.2/
 
-LIBDEPS = apps/devel/libtool apps/devel/automake
+LIBDEPS =  
 
 DESCRIPTION = GNU C/C++ compiler
 URL = http://gcc.gnu.org/

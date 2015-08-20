@@ -5,7 +5,7 @@ DISTFILES  = $(GARNAME)-$(GARVERSION).tar.gz
 
 MASTER_SITES = http://ftp.gnu.org/pub/gnu/ncurses/
 
-LIBDEPS = apps/gcc/gcc apps/devel/libtool apps/devel/automake
+LIBDEPS =   
 
 DESCRIPTION =  Freeware emulation of System V Release 4.0 curses.
 URL = http://www.gnu.org/software/ncurses/ncurses.html

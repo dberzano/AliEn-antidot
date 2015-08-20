@@ -8,7 +8,7 @@ AUTHOR = Condor Project
 URL = http://www.cs.wisc.edu/condor/classad/
 LICENSE = Condor
 
-LIBDEPS = apps/gcc/gcc apps/devel/libtool apps/devel/automake
+LIBDEPS =   
 
 DESCRIPTION = Condor ClassAd library
 

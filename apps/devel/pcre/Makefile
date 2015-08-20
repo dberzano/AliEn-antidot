@@ -9,7 +9,7 @@ BININSTALL_IGNORE = true
 #ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.12.tar.gz
 MASTER_SITES = http://sourceforge.net/projects/pcre/files/pcre/8.35/ ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
 
-LIBDEPS = apps/gcc/gcc apps/devel/libtool apps/devel/automake apps/devel/autoconf
+LIBDEPS =    
 
 DESCRIPTION = regular expression pattern matching using the same syntax and semantics as Perl 5
 URL = http://www.pcre.org/

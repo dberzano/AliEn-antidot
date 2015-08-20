@@ -10,7 +10,7 @@ DISTFILES = $(GARNAME)-$(GARVERSION).tar.gz
 #pcalienstorage:/opt/packages/src/xrd3/repository/tokenauthz-1.1.9.tar.gz
 MASTER_SITES = http://alitorrent.cern.ch/src/xrd3/repository/
 
-LIBDEPS = apps/perl/perl apps/devel/swig apps/system/openssl
+LIBDEPS = apps/perl/perl  apps/system/openssl
 
 AUTHOR  = Andreas Peters and Derek Feichtinger
 LICENSE = 

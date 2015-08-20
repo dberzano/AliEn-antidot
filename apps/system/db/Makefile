@@ -6,7 +6,7 @@ DISTFILES = $(GARNAME)-$(GARVERSION).tar.gz
 #http://www.oracle.com/technology/software/products/berkeley-db/htdocs/popup/db/4.5.20/db-targz.html http://download.oracle.com/berkeley-db/db-4.8.30.tar.gz
 MASTER_SITES =  http://download.oracle.com/berkeley-db/
 
-LIBDEPS = apps/gcc/gcc apps/devel/libtool apps/devel/automake
+LIBDEPS =   
 
 DESCRIPTION = Berkeley DB
 URL = http://www.sleepycat.com/

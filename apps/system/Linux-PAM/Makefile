@@ -15,7 +15,7 @@ MASTER_SITES = http://www.kernel.org/pub/linux/libs/pam/library/ http://www.kern
 #MASTER_SITES = http://www.kernel.org/pub/linux/libs/pam/pre/library/ 
 #http://www.kernel.org/pub/linux/libs/pam/library/Linux-PAM-1.1.0.tar.gz
 
-LIBDEPS = apps/gcc/gcc apps/devel/libtool apps/devel/automake
+LIBDEPS =   
 
 DESCRIPTION =  Linux-PAM (Pluggable Authentication Modules for Linux)
 AUTHOR =  Andrew Morgan

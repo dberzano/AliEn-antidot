@@ -3,7 +3,7 @@ GARVERSION = 1.8.3
 CATEGORIES = apps-tools
 DISTFILES  = $(GARNAME)-$(GARVERSION).tar.gz
 
-LIBDEPS = apps/gcc/gcc apps/devel/libtool apps/devel/automake
+LIBDEPS =   
 
 #krb5-1.8.3-signed.tar
 MASTER_SITES = 

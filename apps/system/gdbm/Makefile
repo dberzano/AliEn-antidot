@@ -6,7 +6,7 @@ PATCHFILES = macosx.diff
 
 MASTER_SITES = ftp://mirror.switch.ch/mirror/gnu/gdbm/
 
-LIBDEPS = apps/gcc/gcc apps/system/db apps/devel/libtool apps/devel/automake
+LIBDEPS =  apps/system/db  
 
 DESCRIPTION = GNU dbm - a set of database routines that use extensible hashing.
 AUTHOR = FSF 

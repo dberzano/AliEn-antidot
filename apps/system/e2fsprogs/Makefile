@@ -9,7 +9,7 @@ MASTER_SITES = http://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v$(G
 
 BININSTALL_IGNORE = true
 
-LIBDEPS = apps/gcc/gcc
+LIBDEPS = 
 
 AUTHOR  =  Theodore Tso
 LICENSE = BSD

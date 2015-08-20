@@ -7,7 +7,7 @@ BININSTALL_IGNORE = true
 
 MASTER_SITES = http://ftp.gnu.org/gnu/automake/
 
-LIBDEPS = apps/devel/autoconf
+LIBDEPS = 
 
 DESCRIPTION = GNU Autmake
 URL = http://www.gnu.org/software/automake/

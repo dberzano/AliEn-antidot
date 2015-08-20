@@ -25,7 +25,7 @@ ifeq ($(shell ../../../platform.sh platform),x86_64-apple-darwin)
     PATCHFILES = Makefile.macos.patch
 endif
 
-LIBDEPS = apps/gcc/gcc
+LIBDEPS = 
 
 DESCRIPTION = Oracle Instant Client
 AUTHOR = Oracle

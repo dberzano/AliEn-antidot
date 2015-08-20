@@ -5,7 +5,7 @@ DISTFILES  = $(GARNAME)-$(GARVERSION).tar.gz
 
 MASTER_SITES = ftp://ftp.gnu.org/gnu/readline/
 
-LIBDEPS = apps/system/ncurses apps/devel/libtool apps/devel/automake
+LIBDEPS = apps/system/ncurses  
 
 DESCRIPTION =  The GNU Readline library
 URL = http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
