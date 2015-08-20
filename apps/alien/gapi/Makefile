@@ -1,9 +1,10 @@
 GARNAME = xrootd-xalienfs
-GARVERSION = 1.0.14n2
+GARVERSION = 1.0.14r1
 CATEGORIES = apps-libs
 DISTNAME  = $(GARNAME)-$(GARVERSION)
 DISTFILES = $(DISTNAME).tar.gz
-PATCHFILES = configure.ac.patch
+#PATCHFILES = configure.ac.patch
+PATCHFILES =
 
 MASTER_SITES = http://aliendb9.cern.ch/src/xalienfs/
 
@@ -30,6 +31,4 @@ endif
 
 include ../category.mk
 
-#ifeq ($(shell uname -s),Darwin)
-	PRE_CONFIGURE = (cd $(WORKSRC) && ./bootstrap.sh)
-#endif
+PRE_CONFIGURE = (cd $(WORKSRC) && sed -i -e 's|XrdNet/XrdNetDNS|XrdSys/XrdSysDNS|g ; s|XrdNetDNS|XrdSysDNS|g' server/XrdxAlienFs.cc && sed -i -e 's|XrdOfsDirectory(user)|XrdOfsDirectory(user, 0)|g ; s|XrdOfsFile(user)|XrdOfsFile(user, 0)|g' server/XrdxAlienFs.hh && autoreconf && ./bootstrap.sh)
