@@ -27,6 +27,10 @@ CONFIGURE_ENV = env GLOBUS_LOCATION=$(GLOBUS_LOCATION) GPT_LOCATION=$(GPT_LOCATI
 BUILD_ENV = env GLOBUS_LOCATION=$(GLOBUS_LOCATION) GPT_LOCATION=$(GPT_LOCATION) GLOBUS_FLAVOR=$(GLOBUS_FLAVOR) CFLAGS="-I$(PREFIX)/include -I$(PREFIX)/jdk/include" CXXFLAGS="-I$(PREFIX)/jdk/include -I$(PREFIX)/jdk/include/linux" CPPFLAGS="-I$(PREFIX)/jdk/include -I$(PREFIX)/jdk/include/linux" LDFLAGS="-L$(PREFIX)/lib -L$(PREFIX)/lib64" GPT_LDFLAGS="-L$(PREFIX)/lib -L$(PREFIX)/lib64 -L$(PREFIX)/globus/lib"
 INSTALL_ENV = env GLOBUS_LOCATION=$(GLOBUS_LOCATION) GPT_LOCATION=$(GPT_LOCATION) GLOBUS_FLAVOR=$(GLOBUS_FLAVOR)  CFLAGS="-I$(PREFIX)/include -I$(PREFIX)/jdk/include" CXXFLAGS="-I$(PREFIX)/jdk/include -I$(PREFIX)/jdk/include/linux" CPPFLAGS="-I$(PREFIX)/jdk/include -I$(PREFIX)/jdk/include/linux" LDFLAGS="-L$(PREFIX)/lib -L$(PREFIX)/lib64" GPT_LDFLAGS="-L$(PREFIX)/lib -L$(PREFIX)/lib64 -L$(PREFIX)/globus/lib" 
 
+CONFIGURE_ENV += GLOBUS_SH_SUDO=/usr/bin/sudo
+BUILD_ENV += GLOBUS_SH_SUDO=/usr/bin/sudo
+INSTALL_ENV += GLOBUS_SH_SUDO=/usr/bin/sudo
+
 ifneq ($(shell uname),Darwin)
 	CONFIGURE_ENV += JAVA_HOME=$(PREFIX)/jdk/ 
 	BUILD_ENV += JAVA_HOME=$(PREFIX)/jdk/
