@@ -10,8 +10,9 @@ PREFIX=$prefix
 
 PLATFORM=$(./platform.sh platform)
 
-GCC_VERSION=$(cd apps/gcc/gcc; make version | awk '{print $2}')
-GCC_PREFIX=$PREFIX/$PLATFORM/$GCC_VERSION
+GCC_VERSION=$(gcc -dumpversion)
+#GCC_PREFIX=$PREFIX/$PLATFORM/$GCC_VERSION
+GCC_PREFIX=/usr
 GCC_INC_DIR=$GCC_PREFIX/include
 GCC_LIB_DIR=$GCC_PREFIX/lib
 GCC_BIN_DIR=$GCC_PREFIX/bin
