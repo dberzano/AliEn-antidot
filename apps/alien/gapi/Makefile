@@ -7,7 +7,7 @@ PATCHFILES = configure.ac.patch
 
 MASTER_SITES = http://aliendb9.cern.ch/src/xalienfs/
 
-LIBDEPS = apps/tools/xrootd  apps/system/e2fsprogs apps/tools/cronolog
+LIBDEPS = apps/tools/xrootd apps/system/e2fsprogs apps/tools/cronolog
 
 DESCRIPTION = ARDA/ALICE packages for API Client+Server
 URL = http://project-arda-dev.web.cern.ch/project-arda-dev/alice/apiservice
@@ -25,7 +25,7 @@ INSTALL_ENV = CFLAGS="-I$(PREFIX)/include" CPPFLAGS="-I$(PREFIX)/include" CXXFLA
 ifeq ($(shell uname),Darwin)
 CONFIGURE_ARGS = --prefix=$(PREFIX)/api --with-xrootd-location=$(PREFIX)/api
 else
-CONFIGURE_ARGS = --prefix=$(PREFIX)/api --with-xrootd-location=$(PREFIX)/api --enable-perl-module --with-swig=$(PREFIX) --with-swig-inc=$(PREFIX)/share/swig/2.0.3/ --with-perl=$(PREFIX)/bin/perl --enable-build-server --disable-readline
+CONFIGURE_ARGS = --prefix=$(PREFIX)/api --with-xrootd-location=$(PREFIX)/api --enable-perl-module --with-swig=$(shell which swig) --with-swig-inc=$(shell ls -1rd /usr/share/swig/*|tail -n1) --with-perl=$(PREFIX)/bin/perl --enable-build-server --disable-readline
 endif
 
 include ../category.mk
