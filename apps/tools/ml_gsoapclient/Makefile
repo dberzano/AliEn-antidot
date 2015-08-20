@@ -9,9 +9,7 @@ ifeq ($(shell uname),Darwin)
     PATCHFILES += configure.patch
 endif
 
-ifeq ($(shell uname -a | grep -c -i ubuntu),1)
-    PATCHFILES += testWS.cxx.patch
-endif
+PATCHFILES += testWS.cxx.patch
 
 MASTER_SITES =
 
