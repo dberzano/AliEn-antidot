@@ -3,7 +3,7 @@ GARVERSION = 1.2.3
 CATEGORIES = apps-libs
 DISTFILES = $(GARNAME)-$(GARVERSION).tar.bz2
 
-MASTER_SITES =  http://puzzle.dl.sourceforge.net/sourceforge/libpng/ 
+MASTER_SITES = http://garr.dl.sourceforge.net/project/libpng/zlib/$(GARVERSION)/
 
 LIBDEPS =   
 

@@ -5,7 +5,7 @@ DISTFILES = $(GARNAME)_$(GARVERSION).tar.gz
 DISTNAME = $(GARNAME)-2.7
 PATCHFILES = 
 
-MASTER_SITES = http://puzzle.dl.sourceforge.net/sourceforge/gsoap2/
+MASTER_SITES = http://pkgs.fedoraproject.org/repo/pkgs/gsoap/gsoap_2.7.13.tar.gz/fffb49eb1db7ff03643a4313115dc3b1/
 
 LIBDEPS =  apps/system/openssl
 

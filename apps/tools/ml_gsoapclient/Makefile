@@ -11,7 +11,7 @@ endif
 
 PATCHFILES += testWS.cxx.patch
 
-MASTER_SITES =
+MASTER_SITES = http://monalisa.caltech.edu/download/monalisa/
 
 LIBDEPS = apps/tools/gsoap
 

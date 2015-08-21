@@ -3,7 +3,7 @@ GARVERSION = 1.6.2
 CATEGORIES = apps-tools
 DISTFILES = $(GARNAME)-$(GARVERSION).tar.gz
 
-MASTER_SITES =  http://cronolog.org/download/
+MASTER_SITES = http://pkgs.fedoraproject.org/repo/pkgs/cronolog/cronolog-1.6.2.tar.gz/a44564fd5a5b061a5691b9a837d04979/
 
 LIBDEPS = 
 
