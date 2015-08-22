@@ -501,7 +501,7 @@ build-%/GNUmakefile:
 build-%/cmake.ng:
 	@echo ' $(call TMSG_LIB,Running make for a CMake-ng project in,$*)'
 	$(PRE_BUILD)
-	@(cd $*/CMake-Build && $(MAKE) $(BUILD_ARGS))
+	@(cd $*/CMake-Build && $(MAKE) -j$(shell grep -c bogomips /proc/cpuinfo || echo 4) $(BUILD_ARGS))
 	$(POST_BUILD)
 	@$(MAKECOOKIE)
 
