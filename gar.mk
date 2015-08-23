@@ -141,11 +141,16 @@ endif
 
 #################### DIRECTORY MAKERS ####################
 
-# This is to make dirs as needed by the base rules
-$(sort $(DOWNLOADDIR) $(COOKIEDIR) $(WORKSRC) $(WORKDIR) $(EXTRACTDIR) $(FILEDIR) $(SCRATCHDIR) $(INSTALL_DIRS)) $(COOKIEDIR)/%:
-	@if test -d $@; then : ; else \
-		install -d $@; \
+# Macro syntax makes it compatible with GNU Make 3.82 (CC7): multiple targets
+# are no longer supported.
+# See here: http://stackoverflow.com/questions/9691508/how-can-i-use-macros-to-generate-multiple-makefile-targets-rules-inside-foreach
+define DIRMAKERS
+$(1):
+	@if test -d $(1); then : ; else \
+		install -d $(1); \
 	fi
+endef
+$(foreach ITEM,$(sort $(DOWNLOADDIR) $(COOKIEDIR) $(WORKSRC) $(WORKDIR) $(EXTRACTDIR) $(FILEDIR) $(SCRATCHDIR) $(INSTALL_DIRS)) $(COOKIEDIR)/%, $(eval $(call DIRMAKERS,$(ITEM))))
 
 # These stubs are wildcarded, so that the port maintainer can
 # define something like "pre-configure" and it won't conflict,
