@@ -25,6 +25,6 @@ TEST_SCRIPTS =
 CONFIGURE_ARGS = --prefix=$(PREFIX)
 INSTALL_TARGET = install-libs
 
-POST_INSTALL  = (cd $(PREFIX)/api/lib; ln -nfs ../../lib/libuuid.a .)
-
 include ../category.mk
+
+POST_INSTALL = (echo YABBA YABBA && cd $(PREFIX)/api/lib && ln -nfs ../../lib/libuuid.a . && echo DONE DONE)
