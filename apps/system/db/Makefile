@@ -14,7 +14,7 @@ AUTHOR = Sleepycat Software
 LICENSE = Sleepycat
 
 CONFIGURE_SCRIPTS = $(WORKSRC)/build_unix/configure
-BUILD_SCRIPTS = $(WORKSRC)/build_unix/Makefile
+BUILD_SCRIPTS = $(WORKSRC)/build_unix/Makefile.multicore
 INSTALL_SCRIPTS = $(WORKSRC)/build_unix/Makefile
 #TEST_SCRIPTS = $(WORKSRC)/build_unix/Makefile
 

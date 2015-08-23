@@ -13,7 +13,7 @@ AUTHOR = Pavel Curtis
 LICENSE = 
 
 CONFIGURE_SCRIPTS = $(WORKSRC)/configure
-BUILD_SCRIPTS = $(WORKSRC)/Makefile
+BUILD_SCRIPTS = $(WORKSRC)/Makefile.multicore
 INSTALL_SCRIPTS = $(WORKSRC)/Makefile
 
 CONFIGURE_ARGS = --prefix=$(PREFIX) --with-shared  --enable-broken_linker --without-ada  --enable-symlinks

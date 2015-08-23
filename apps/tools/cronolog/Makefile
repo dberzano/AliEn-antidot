@@ -13,7 +13,7 @@ AUTHOR = Andrew Ford
 LICENSE = zlib
 
 CONFIGURE_SCRIPTS = $(WORKSRC)/configure
-BUILD_SCRIPTS = $(WORKSRC)/Makefile
+BUILD_SCRIPTS = $(WORKSRC)/Makefile.multicore
 INSTALL_SCRIPTS = $(WORKSRC)/Makefile
 TEST_SCRIPTS =
 

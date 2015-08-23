@@ -14,7 +14,7 @@ LICENSE = GPL2
 URL= http://www.gnu.org/software/gdbm/gdbm.html
 
 CONFIGURE_SCRIPTS = $(WORKSRC)/configure
-BUILD_SCRIPTS = $(WORKSRC)/Makefile
+BUILD_SCRIPTS = $(WORKSRC)/Makefile.multicore
 INSTALL_SCRIPTS = $(WORKSRC)/Makefile
 
 CONFIGURE_ARGS = $(DIRPATHS)

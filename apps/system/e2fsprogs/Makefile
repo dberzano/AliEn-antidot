@@ -18,7 +18,7 @@ URL     = http://e2fsprogs.sourceforge.net/
 DESCRIPTION = UUID library 
 
 CONFIGURE_SCRIPTS = $(WORKSRC)/configure 
-BUILD_SCRIPTS = $(WORKSRC)/Makefile
+BUILD_SCRIPTS = $(WORKSRC)/Makefile.multicore
 INSTALL_SCRIPTS = $(WORKSRC)/Makefile
 TEST_SCRIPTS = 
 

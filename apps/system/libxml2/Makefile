@@ -13,7 +13,7 @@ AUTHOR = Daniel Veillard
 LICENSE = MIT
 
 CONFIGURE_SCRIPTS = $(WORKSRC)/configure
-BUILD_SCRIPTS = $(WORKSRC)/Makefile
+BUILD_SCRIPTS = $(WORKSRC)/Makefile.multicore
 INSTALL_SCRIPTS = $(WORKSRC)/Makefile
 
 CONFIGURE_ARGS = --prefix=$(PREFIX) --without-zlib --with-readline=$(PREFIX)

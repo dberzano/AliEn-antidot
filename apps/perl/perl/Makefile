@@ -15,7 +15,7 @@ URL = http://www.perl.org
 LICENSE = Perl
 
 CONFIGURE_SCRIPTS = $(WORKSRC)/Configure
-BUILD_SCRIPTS = $(WORKSRC)/Makefile
+BUILD_SCRIPTS = $(WORKSRC)/Makefile.multicore
 INSTALL_SCRIPTS = $(WORKSRC)/Makefile
 TEST_SCRIPTS = $(WORKSRC)/Makefile
 

@@ -498,6 +498,11 @@ build-%/GNUmakefile:
 	@$(BUILD_ENV) $(MAKE) $(foreach TTT,$(BUILD_OVERRIDE_DIRS),$(TTT)="$($(TTT))") -C $* $(BUILD_ARGS)
 	@$(MAKECOOKIE)
 
+build-%/Makefile.multicore:
+	@echo ' $(call TMSG_LIB,Running make multicore in,$*)'
+	@$(BUILD_ENV) $(MAKE) -j$(shell grep -c bogomips /proc/cpuinfo || echo 4) $(foreach TTT,$(BUILD_OVERRIDE_DIRS),$(TTT)="$($(TTT))") -C $* $(BUILD_ARGS)
+	@$(MAKECOOKIE)
+
 build-%/cmake.ng:
 	@echo ' $(call TMSG_LIB,Running make for a CMake-ng project in,$*)'
 	$(PRE_BUILD)
