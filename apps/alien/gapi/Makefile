@@ -23,10 +23,16 @@ CONFIGURE_ENV = CFLAGS="-I$(PREFIX)/include -I$(PREFIX)/api/include/xrootd/priva
 BUILD_ENV = CFLAGS="-I$(PREFIX)/include -I$(PREFIX)/api/include/xrootd/private" CPPFLAGS="-I$(PREFIX)/include -I$(PREFIX)/api/include/xrootd/private" CXXFLAGS="-I$(PREFIX)/include -I$(PREFIX)/api/include/xrootd/private" LDFLAGS="-L$(PREFIX)/lib -L$(PREFIX)/lib64"
 INSTALL_ENV = CFLAGS="-I$(PREFIX)/include -I$(PREFIX)/api/include/xrootd/private" CPPFLAGS="-I$(PREFIX)/include -I$(PREFIX)/api/include/xrootd/private" CXXFLAGS="-I$(PREFIX)/include -I$(PREFIX)/api/include/xrootd/private" LDFLAGS="-L$(PREFIX)/lib -L$(PREFIX)/lib64"
 
+ifeq ($(wildcard /usr/share/swig),)
+  GAPI_SWIG_INCLUDE = /usr/share/swig2.0
+else
+  GAPI_SWIG_INCLUDE = $(shell ls -1rd /usr/share/swig/* 2> /dev/null | tail -n1)
+endif
+
 ifeq ($(shell uname),Darwin)
 CONFIGURE_ARGS = --prefix=$(PREFIX)/api --with-xrootd-location=$(PREFIX)/api
 else
-CONFIGURE_ARGS = --prefix=$(PREFIX)/api --with-xrootd-location=$(PREFIX)/api --enable-perl-module --with-swig=$(shell which swig) --with-swig-inc=$(shell ls -1rd /usr/share/swig/*|tail -n1) --with-perl=$(PREFIX)/bin/perl --enable-build-server --disable-readline $(CONFIGURE_ENV)
+CONFIGURE_ARGS = --prefix=$(PREFIX)/api --with-xrootd-location=$(PREFIX)/api --enable-perl-module --with-swig=$(shell which swig) --with-swig-inc=$(GAPI_SWIG_INCLUDE) --with-perl=$(PREFIX)/bin/perl --enable-build-server --disable-readline $(CONFIGURE_ENV)
 endif
 
 include ../category.mk
